@@ -117,7 +117,7 @@
         }
 
         function showVideo() {
-            let code = document.getElementById("code").value
+            let code = videos[document.getElementById("code").value]
             if (!code) return
             let video = document.createElement("video");
             video.src = code
