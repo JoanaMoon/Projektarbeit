@@ -1,3 +1,6 @@
+const videos = {"abc": "https://static.xmnt.dev/video1.mp4"}
+
 function() {
-    alert("AAAAAAAA")
+    let code = document.getElementById("code").value
+    alert(videos[code])
 }
