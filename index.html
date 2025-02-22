@@ -118,7 +118,11 @@
 
         function showVideo() {
             let code = document.getElementById("code").value
-            alert(videos[code])
+            if (!code) return
+            let video = document.createElement("video");
+            video.src = code
+            video.autoplay = true
+            document.body.appendChild(video);
         }
     </script>
 
