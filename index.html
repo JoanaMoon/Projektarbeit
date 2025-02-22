@@ -82,6 +82,7 @@
         }
 
         .bye {
+            display: none;
             font-family: 'Garamond', serif;
             font-size: 1.2em;
             padding: 10px 20px;
@@ -98,6 +99,10 @@
 
         .bye:hover {
             background-color: #9c836a78;
+        }
+
+        .bye:has(+video) {
+            display: block;
         }
 
         .videoContainer {
@@ -127,7 +132,7 @@
             color: #9f4233; 
         }
 
-        .content:has(+video) {
+        .videoContainer:has(video)+.content {
             display: none;
         }
     </style>
