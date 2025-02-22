@@ -102,6 +102,10 @@
         .error {
             color: #9f4233; 
         }
+
+        .content:has(+video) {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -124,11 +128,20 @@
             video.autoplay = true
             document.body.appendChild(video);
         }
+
+        function closeVideo() {
+            document.querySelectorAll("video").forEach(video => video.remove());
+        }
     </script>
+
+    <button onclick="closeVideo()">X</button>
 
     <div class="content">
         <input type="text" id="code" maxlength="5" minlength="5" required>
         <button onclick="showVideo()" type="submit">Senden</button>
     </div>
+
+
+
 </body>
 </html>
