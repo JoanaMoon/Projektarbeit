@@ -107,15 +107,6 @@
 <body>
     <h1>Gebe deinen Code ein:</h1>
 
-   
-    
-
-    <div class="content">
-        <input type="text" id="code" maxlength="5" minlength="5" required>
-        <button onclick="showVideo" type="submit">Senden</button>
-    </div>
-
-
     <script>
         const videos = {"abc": "https://static.xmnt.dev/video1.mp4"}
 
@@ -124,5 +115,10 @@
             alert(videos[code])
         }
     </script>
+
+    <div class="content">
+        <input type="text" id="code" maxlength="5" minlength="5" required>
+        <button onclick="showVideo" type="submit">Senden</button>
+    </div>
 </body>
 </html>
