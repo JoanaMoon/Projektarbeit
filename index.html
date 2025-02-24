@@ -12,7 +12,7 @@
         * {
             transition: all ease-in-out .15s;
         }
-        /* Allgemeine Stile */
+        
         body {
             font-family: 'Agency FB', sans-serif;
             text-align: center;
@@ -29,7 +29,7 @@
             padding-bottom: 40px; 
         }
 
-        /* Hintergrundbild für die Mitte */
+        /* Hintergrundbild */
         .content {
             background-image: url("https://static.xmnt.dev/background.jpg"); 
             background-position: center; 
@@ -48,7 +48,7 @@
             color: #7c5e48; 
         }
 
-        /* Stil für das Eingabefeld */
+        /* Eingabefeld */
         input[type="text"] {
             font-size: 1.2em;
             padding: 10px;
@@ -66,7 +66,7 @@
             box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
         }
 
-        /* Stil für den Absende-Button */
+        /* Senden-Button */
         button {
             font-size: 1.2em;
             padding: 10px 20px;
@@ -82,6 +82,7 @@
             background-color: #9c836a; /
         }
 
+        /* Zurück-Button */
         .bye {
             display: none;
             font-size: 1.2em;
@@ -104,17 +105,19 @@
             display: block;
         }
 
+        /* Video Container */
         .videoContainer {
-            max-width: 100vw;
+            max-width: 100vw; 
             max-height: 100vh;
         }
 
+        /* Weil das Video nicht auf den Video Container reagiert */
         video {
             max-width: 100vw;
             max-height: 100vh;
         }
 
-        /* Stil für den Button-Link */
+        /* Button-Link */
         a {
             text-decoration: none;
             color: #4e443b;
@@ -135,6 +138,7 @@
             color: #9f4233; 
         }
 
+        /* Eingabefeld – wenn ein Video angezeigt wird */
         .videoContainer:has(video)+.content {
             display: none;
         }
@@ -175,7 +179,7 @@
     </div>
 
     <div class="content">
-        <h1>GEBT EUREN CODE EIN:</h1>
+        <h1>EUER CODE:</h1>
         <input type="text" id="code" maxlength="5" minlength="5" required oninput="codeInput(event)">
         <button onclick="showVideo()" type="submit">SENDEN</button>
     </div>
